@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">bachelorthesis</string>
+    <string name="location">A28, Bremen Oldenburg</string>
+    <string name="arrivalString">Arrival:</string>
+    <string name="arrivalTime">12:16</string>
+    <string name="currentTimeString">Time:</string>
+    <string name="currentTime">11:54</string>
+    <string name="swUsed">SW: vw-ab362:Lane_Assistent</string>
+    <string name="pace">Speed: 76Km/H</string>
+    <string name="settings">Settings</string>
+    <string name="maneuverAssistent">Show Maneuvers</string>
+    <string name="distanceAssistent">Show Distances</string>
+    <string name="home">Home</string>
+    <string name="greating">Hey! There is a new Software for you to try out!</string>
+    <string name="buyTitle">Buy</string>
+    <string name="buyDescription">If you keep this option, the software is permanently going to be installed on your vehicle.</string>
+    <string name="shop">Shop</string>
+    <string name="stats">Software Statistics</string>
+    <string name="swManagement">Software Management</string>
+    <string name="suggestions">Suggestions</string>
+    <string name="trends">Trending Software</string>
+    <string name="swNameExample1">Überholungs Software</string>
+    <string name="descriptionExample1">This Software will enable your car to move past other vehicles. I Know, this is basic. The Lanechange for the maneuver is very smooth, trust me i\'m an engineer.</string>
+    <string name="price">59,35€</string>
+</resources>

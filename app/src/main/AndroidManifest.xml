@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.linushestermeyer.hmi">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".view.ShopActivity"></activity>
+        <activity android:name=".view.HomeActivity" />
+        <activity android:name=".view.OfferActivity2" />
+
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
+
+        <service android:name=".view.MyMessagingService" />
+
+        <receiver android:name=".view.MessageReadReceiver">
+            <intent-filter>
+                <action android:name="linus.hestermeyer.bachelorthesis.ACTION_MESSAGE_READ" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".view.MessageReplyReceiver">
+            <intent-filter>
+                <action android:name="linus.hestermeyer.bachelorthesis.ACTION_MESSAGE_REPLY" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".view.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.OfferActivity" />
+    </application>
+
+</manifest>
