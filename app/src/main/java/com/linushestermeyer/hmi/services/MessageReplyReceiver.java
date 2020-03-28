@@ -1,4 +1,4 @@
-package com.linushestermeyer.hmi.view;
+package com.linushestermeyer.hmi.services;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

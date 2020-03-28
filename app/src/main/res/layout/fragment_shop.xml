@@ -3,8 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ShopActivity">
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:background="@drawable/ic_test_background"
+        android:padding="20dp"
+        android:layout_margin="15dp"
+        >
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_menu_black_100dp"
+            />
+    </LinearLayout>
 
     <Button
         android:id="@+id/shopShop"

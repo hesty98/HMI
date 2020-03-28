@@ -16,10 +16,11 @@
     <string name="buyDescription">If you keep this option, the software is permanently going to be installed on your vehicle.</string>
     <string name="shop">Shop</string>
     <string name="stats">Software Statistics</string>
-    <string name="swManagement">Software Management</string>
+    <string name="swManagement">Installed Software</string>
     <string name="suggestions">Suggestions</string>
     <string name="trends">Trending Software</string>
     <string name="swNameExample1">Überholungs Software</string>
     <string name="descriptionExample1">This Software will enable your car to move past other vehicles. I Know, this is basic. The Lanechange for the maneuver is very smooth, trust me i\'m an engineer.</string>
     <string name="price">59,35€</string>
+    <string name="messages">Notifications</string>
 </resources>

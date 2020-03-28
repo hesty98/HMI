@@ -1,4 +1,4 @@
-package com.linushestermeyer.hmi.view;
+package com.linushestermeyer.hmi.services;
 
 import android.app.PendingIntent;
 import android.app.Service;

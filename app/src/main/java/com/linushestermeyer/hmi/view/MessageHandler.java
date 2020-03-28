@@ -1,6 +1,7 @@
 package com.linushestermeyer.hmi.view;
 
-import Messages.IMessage;
+
+import com.linushestermeyer.hmi.common.Messages.IMessage;
 
 public class MessageHandler {
     private static MessageHandler single_instance = null;

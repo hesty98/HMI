@@ -1,92 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
     >
 
-    <TextView
-        android:id="@+id/hometv"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/home"
-        android:textSize="60dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/background_v2"
-        android:gravity="center"
-        android:padding="20dp"
-        android:textColor="@color/black"
-        />
-    <Button
+        android:background="@drawable/toolbar_background"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
         android:id="@+id/buttonSWManagement"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.38"
+        android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hometv"
-        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="@id/tvSWManagement"
+        app:layout_constraintTop_toTopOf="@id/tvSWManagement"
+        app:layout_constraintBottom_toBottomOf="@id/tvSWManagement"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/ic_test_background"
+        />
+    <TextView
+        android:id="@+id/tvSWManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tabs"
+        app:layout_constraintStart_toStartOf="@id/buttonSWManagement"
+        app:layout_constraintEnd_toEndOf="@id/buttonSWManagement"
+        android:layout_marginTop="40dp"
+        android:textSize="30dp"
         android:text="@string/swManagement"
-        android:layout_marginLeft="80dp"
-        app:layout_constraintTop_toTopOf="@id/buttonStats"
-        app:layout_constraintBottom_toBottomOf="@id/buttonStats"
-        android:background="@drawable/background_v1"
-        android:padding="15dp"
+        android:textColor="@color/black"
+        android:paddingVertical="30dp"
+        android:paddingHorizontal="20dp"
         />
-    <Button
-        android:id="@+id/buttonStats"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.38"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hometv"
-        android:textSize="40dp"
-        android:text="@string/stats"
-        android:layout_marginRight="80dp"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/background_v1"
-        android:padding="15dp"
-        />
-    <Button
-        android:id="@+id/buttonShop"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.38"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSWManagement"
-        android:textSize="40dp"
-        android:text="@string/shop"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/background_v1"
-        android:padding="15dp"
-        />
-    <Button
-        android:id="@+id/buttonSettings"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.38"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/buttonShop"
-        app:layout_constraintBottom_toBottomOf="@id/buttonShop"
-        android:textSize="40dp"
-        android:text="@string/settings"
-        android:layout_marginRight="80dp"
-        android:background="@drawable/background_v1"
-        android:padding="15dp"
 
-        />
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@mipmap/ic_launcher_uol_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="80dp"
+        android:id="@+id/buttonNotifications"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/buttonSWManagement"
+        app:layout_constraintEnd_toEndOf="@id/tvNotifications"
+        app:layout_constraintTop_toTopOf="@id/tvNotifications"
+        app:layout_constraintBottom_toBottomOf="@id/tvNotifications"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/ic_test_background"
         />
+    <TextView
+        android:id="@+id/tvNotifications"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/buttonSWManagement"
+        app:layout_constraintBottom_toBottomOf="@id/buttonSWManagement"
+        app:layout_constraintStart_toStartOf="@id/buttonNotifications"
+        app:layout_constraintEnd_toEndOf="@id/buttonNotifications"
+        android:textSize="30dp"
+        android:text="@string/messages"
+        android:textColor="@color/black"
+        android:paddingVertical="30dp"
+        android:paddingHorizontal="20dp"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,10 @@
 package com.linushestermeyer.hmi.network;
 
+import com.linushestermeyer.hmi.common.Messages.*;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
-
-import Messages.IMessage;
-
 
 public class Connection implements IConnection {
 
@@ -84,10 +83,6 @@ public class Connection implements IConnection {
         }catch(Exception e){
             e.printStackTrace();
         }
-    }
-
-    public interface IMessageReader {
-        void readSocket(IMessage msg);
     }
 
     public boolean isRunning(){

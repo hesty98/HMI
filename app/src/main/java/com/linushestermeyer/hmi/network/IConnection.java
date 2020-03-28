@@ -1,7 +1,6 @@
 package com.linushestermeyer.hmi.network;
 
-
-import Messages.IMessage;
+import com.linushestermeyer.hmi.common.Messages.*;
 
 public interface IConnection {
     /**
