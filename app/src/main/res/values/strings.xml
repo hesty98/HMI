@@ -22,5 +22,5 @@
     <string name="swNameExample1">Überholungs Software</string>
     <string name="descriptionExample1">This Software will enable your car to move past other vehicles. I Know, this is basic. The Lanechange for the maneuver is very smooth, trust me i\'m an engineer.</string>
     <string name="price">59,35€</string>
-    <string name="messages">Notifications</string>
+    <string name="notifications">Notifications</string>
 </resources>
