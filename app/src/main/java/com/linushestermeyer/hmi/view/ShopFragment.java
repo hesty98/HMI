@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -11,13 +13,14 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.linushestermeyer.hmi.R;
+import com.linushestermeyer.hmi.network.MessageHandler;
 
+import EnvironmentObjects.ServiceProvider;
+import Messages.ServiceMessage;
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class ShopFragment extends Fragment {
-
-    @BindView(R.id.listViewShop)
-    ListView listView;
 
     @Nullable
     @Override
@@ -33,13 +36,6 @@ public class ShopFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //Hier Angebotene SW für autos bereitstellen
-        /*
-        in BA: unterschied zwischen diesem App store und GooglePlayStore erläutern
-         */
-
-        //listView.setAdapter(adapter);
 
     }
 }

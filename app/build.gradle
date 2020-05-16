@@ -26,7 +26,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res/layouts/activities',
+                            'src/main/res/layouts/fragments',
+                            'src/main/res/layouts/items',
+                            'src/main/res/layouts',
+                            'src/main/res'
+                    ]
+        }
+    }
 }
 
 dependencies {
@@ -48,4 +59,8 @@ dependencies {
     //butterknife
     implementation 'com.jakewharton:butterknife:10.2.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation files('C:\\Users\\linus\\IdeaProjects\\bachelorthesis\\Common\\target\\Common-1.0-SNAPSHOT.jar')
+    // https://mvnrepository.com/artifact/io.netty/netty-all
+    implementation(group: 'io.netty', name: 'netty-all', version: '4.1.50.Final')
+
 }

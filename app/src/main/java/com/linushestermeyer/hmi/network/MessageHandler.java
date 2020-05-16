@@ -1,11 +1,10 @@
-package com.linushestermeyer.hmi.view;
+package com.linushestermeyer.hmi.network;
 
-
-import com.linushestermeyer.hmi.common.Messages.IMessage;
+import Messages.IMessage;
 
 public class MessageHandler {
     private static MessageHandler single_instance = null;
-
+    private Connection connection;
     public String s;
 
     // private constructor restricted to this class itself
@@ -25,5 +24,13 @@ public class MessageHandler {
 
     public void manageMessage(IMessage msg) {
 
+    }
+
+    public void setConnection(Connection c){
+        this.connection=c;
+    }
+
+    public void sendToSam(IMessage msg) {
+        connection.sendMessage(msg);
     }
 }

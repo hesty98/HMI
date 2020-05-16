@@ -11,13 +11,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import com.linushestermeyer.hmi.R;
-import com.linushestermeyer.hmi.common.EnvironmentObjects.ServiceDescription;
 
 import java.util.ArrayList;
 
-public class SwShopItemAdapter extends ArrayAdapter<ServiceDescription> {
+import EnvironmentObjects.Description;
 
-    public SwShopItemAdapter(@NonNull Context context, ArrayList<ServiceDescription> softwares) {
+
+//TODO: change between ServiceDescription and SoftwareDescription
+public class SwShopItemAdapter extends ArrayAdapter<Description> {
+
+    public SwShopItemAdapter(@NonNull Context context, ArrayList<Description> softwares) {
         super(context, 0,softwares);
     }
 
@@ -28,19 +31,19 @@ public class SwShopItemAdapter extends ArrayAdapter<ServiceDescription> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Get the data item for this position
-        ServiceDescription serviceDescription = getItem(position);
+        Description serviceDescription = getItem(position);
         // Check if an existing view is being reused, otherwise inflate the view
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.sw_shop_item, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_sw_shop, parent, false);
         }
         // Lookup view for data population
         TextView tvName = (TextView) convertView.findViewById(R.id.swNameTV);
         TextView tvDesc = (TextView) convertView.findViewById(R.id.swDesc);
         TextView tvPrice = (TextView) convertView.findViewById(R.id.swPrice);
         // Populate the data into the template view using the data object
-        tvName.setText(serviceDescription.getServiceTitle());
-        tvDesc.setText(serviceDescription.getServiceDescription());
-        tvPrice.setText("TODO: Preis; SWShopItemAdapter");
+        tvName.setText(serviceDescription.getTitle());
+        tvDesc.setText(serviceDescription.getDescription());
+        tvPrice.setText((serviceDescription.getAngebot().getPricePerUnit())/100+","+(serviceDescription.getAngebot().getPricePerUnit())%100);
         // Return the completed view to render on screen
         return convertView;
     }
