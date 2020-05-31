@@ -43,7 +43,7 @@ public class SwShopItemAdapter extends ArrayAdapter<Description> {
         // Populate the data into the template view using the data object
         tvName.setText(serviceDescription.getTitle());
         tvDesc.setText(serviceDescription.getDescription());
-        tvPrice.setText((serviceDescription.getAngebot().getPricePerUnit())/100+","+(serviceDescription.getAngebot().getPricePerUnit())%100);
+        //tvPrice.setText((serviceDescription.getAngebot().getPricePerUnit())/100+","+(serviceDescription.getAngebot().getPricePerUnit())%100);
         // Return the completed view to render on screen
         return convertView;
     }

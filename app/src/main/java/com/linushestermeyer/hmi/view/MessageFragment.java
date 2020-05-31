@@ -30,7 +30,7 @@ public class MessageFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mListView=getView().findViewById(R.id.listViewMSG);
+//        mListView=getView().findViewById(R.id.listViewMSG);
 
 
 

@@ -29,10 +29,6 @@ public class Connection implements IConnection {
     private ObjectOutputStream out = null;
     private IMessageReader messageReader =null;
 
-    private Connection() {
-
-    }
-
     public void setMessageReader(IMessageReader messageReader){
         if(this.messageReader ==null) {
             this.messageReader = messageReader;
@@ -92,7 +88,7 @@ public class Connection implements IConnection {
             @Override
             protected Object doInBackground(Object... voids) {
                 try {
-                    Log.e("DEBUG", "trying to write and flush. Out: \r\n"+out);
+                    Log.e("DEBUG", "trying to write and flush.");
                         out.writeObject(msg);
                         out.flush();
                         Log.e("SUCCESS", "sent Message");
@@ -102,20 +98,15 @@ public class Connection implements IConnection {
                 return null;
             }
         };
-        Log.e("Tag", "ich versuchs");
         task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
     @Override
     public void readPort() {
-        //Dauerschleife
         while(true) {
             try {
-                //input.readChar();
-//                Object obj = input.readObject();
-                ServiceRegistrationMessage msg =  (ServiceRegistrationMessage)input.readObject();
-                Log.e("TAG","Incoming Message install: "+ msg.isInstallSW());
-                //TODO: parse Object from binary
+                IMessage msg =  (IMessage) input.readObject();
+                Log.e("SUCCESS", "Received "+msg);
                 messageReader.readSocket((IMessage)msg);
 
             } catch (Exception e) {

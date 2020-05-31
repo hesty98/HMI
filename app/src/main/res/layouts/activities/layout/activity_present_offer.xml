@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ActivityPresentOffer">
+    tools:context=".view.ActivityPresentOffer"
+    android:id="@+id/layout">
     <TextView
         android:id="@+id/offer_title"
         android:layout_width="wrap_content"
@@ -28,16 +29,15 @@
         android:layout_marginHorizontal="50dp"
         android:text="loremipsum"
         />
-    <TextView
-        android:id="@+id/pricePerUnit"
+    <ListView
+        android:id="@+id/priceList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/descriptionTV"
-        android:text="20,00€"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="30dp"
-        android:textSize="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_angebot"
+
         />
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buyButton"
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/dontBuyButton"
-        app:layout_constraintTop_toTopOf="@id/pricePerUnit"
+        app:layout_constraintTop_toBottomOf="@id/priceList"
         android:textSize="35dp"
         android:text="Buy"
         />
@@ -54,8 +54,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/buyButton"
-        app:layout_constraintEnd_toStartOf="@id/pricePerUnit"
-        app:layout_constraintTop_toTopOf="@id/pricePerUnit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/priceList"
         android:textSize="35dp"
         android:text="Don't buy"
         />

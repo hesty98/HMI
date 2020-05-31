@@ -15,7 +15,6 @@ import androidx.fragment.app.Fragment;
 import com.linushestermeyer.hmi.R;
 import com.linushestermeyer.hmi.network.MessageHandler;
 
-import EnvironmentObjects.ServiceProvider;
 import Messages.ServiceMessage;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,6 +35,5 @@ public class ShopFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 }
