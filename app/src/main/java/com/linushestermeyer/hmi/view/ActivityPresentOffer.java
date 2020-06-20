@@ -43,7 +43,7 @@ public class ActivityPresentOffer extends AppCompatActivity implements ViewClick
         }catch (Exception e){
             e.printStackTrace();
         }
-
+        Log.e("Tag", "Yep, i got called.");
         TextView offer_title = findViewById(R.id.offer_title);
         TextView descriptionTV = findViewById(R.id.descriptionTV);
         ListView priceList = findViewById(R.id.priceList);

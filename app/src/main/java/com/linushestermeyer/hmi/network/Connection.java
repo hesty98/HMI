@@ -53,7 +53,14 @@ public class Connection implements IConnection {
 
     @Override
     public void stopConnection() {
-
+        Log.e("Tag", "connection stopped");
+        try {
+            input.close();
+            out.close();
+            socket.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -72,6 +79,7 @@ public class Connection implements IConnection {
                     readPort();
                 }catch(Exception e){
                     Log.e("Exception", e+"");
+                    //isConnected=false;
                 }
                 return null;
             }
@@ -103,16 +111,21 @@ public class Connection implements IConnection {
 
     @Override
     public void readPort() {
-        while(true) {
+        while(isRunning()) {
             try {
-                IMessage msg =  (IMessage) input.readObject();
+                Log.e("IsRunning:", input+"");
+                Object msg =  input.readObject();
                 Log.e("SUCCESS", "Received "+msg);
-                messageReader.readSocket((IMessage)msg);
-
+                if(msg instanceof IMessage)
+                    messageReader.readSocket((IMessage)msg);
             } catch (Exception e) {
                 e.printStackTrace();
+                isConnected=false;
             }
         }
+        stopConnection();
+        //Log.e()
+        //startConnection();
     }
 
     public boolean isRunning(){
